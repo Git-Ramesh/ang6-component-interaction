@@ -1,0 +1,20 @@
+<!--
+    class to html template interaction generally happens through following ways.
+        1) Interpolation {{}}
+        2) Property binding []
+        3) Two way data binding [()]
+    templtae to class interaction generally happens through following ways.
+        1) Event Binding
+        2) Two way data binding
+
+-->
+<h1>{{title}}</h1>
+<img [src]="image_url" [width]="image_width" [height]="image_height" alt="image" />
+<div>
+  <button (click)="incrementCount()">Click</button><br />
+  {{count}}
+</div>
+<div>
+  Name: <input type="text" [(ngModel)]="name" /><br>
+  {{name}}
+</div>

@@ -1,0 +1,18 @@
+<!--
+  Intercomponent interaction can be achieved in following ways
+    1) Input() decorator
+    2) Getters and Setters
+    3) ngOnChanges()
+    4) Template reference variables
+    5) ViewChild decorator
+    6) Emitting events
+-->
+
+<h1>Inter Component Interaction(Accessing child component class variables and methods in parent component class)</h1>
+<div>
+  <h1>Parent Component</h1>
+  <app-child #appChildRef></app-child>
+  <p>{{appChildRef.devName}}</p>
+  Chnage DevName: <input type="text" [ngModel]="appChildRef.devName" (ngModelChange)="appChildRef.devName=$event" />
+  Chnage DevName: <input type="text" [ngModel]="appChildRef.devName" (ngModelChange)="appChildRef.changeDevName($event)" />
+</div>

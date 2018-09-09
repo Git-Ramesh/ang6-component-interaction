@@ -1,0 +1,6 @@
+<h1>Spliting Twoway databinding</h1>
+<div>
+  <input type="text" [ngModel]="username" (ngModelChange)="username = $event" (ngModelChange)="getLengthOfUsername($event)">
+  <br />
+  {{username}}
+</div>

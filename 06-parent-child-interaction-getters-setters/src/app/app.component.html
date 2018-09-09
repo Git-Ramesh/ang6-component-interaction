@@ -1,0 +1,14 @@
+<!--
+  Intercomponent interaction can be achieved in following ways
+    1) Input() decorator
+    2) Getters and Setters
+    3) ngOnChanges()
+    4) Template reference variables
+    5) ViewChild decorator
+    6) Emitting events
+-->
+<h1>Inter Component Interaction - Using Getters and Setters</h1>
+<p><button (click)="changeLogin()">Toggle Login</button></p>
+<div>
+  <app-child [loggedIn]="isLoggedIn"></app-child>
+</div>
